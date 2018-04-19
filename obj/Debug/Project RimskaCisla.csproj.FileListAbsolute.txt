@@ -1,0 +1,7 @@
+C:\Users\tomba\Desktop\Škola\Fakulta aplikované informatiky UTB\Softwarová podpora týmu\Project RimskaCisla\Project RimskaCisla\bin\Debug\Project RimskaCisla.exe.config
+C:\Users\tomba\Desktop\Škola\Fakulta aplikované informatiky UTB\Softwarová podpora týmu\Project RimskaCisla\Project RimskaCisla\bin\Debug\Project RimskaCisla.exe
+C:\Users\tomba\Desktop\Škola\Fakulta aplikované informatiky UTB\Softwarová podpora týmu\Project RimskaCisla\Project RimskaCisla\bin\Debug\Project RimskaCisla.pdb
+C:\Users\tomba\Desktop\Škola\Fakulta aplikované informatiky UTB\Softwarová podpora týmu\Project RimskaCisla\Project RimskaCisla\obj\Debug\Project RimskaCisla.csprojResolveAssemblyReference.cache
+C:\Users\tomba\Desktop\Škola\Fakulta aplikované informatiky UTB\Softwarová podpora týmu\Project RimskaCisla\Project RimskaCisla\obj\Debug\Project RimskaCisla.csproj.CoreCompileInputs.cache
+C:\Users\tomba\Desktop\Škola\Fakulta aplikované informatiky UTB\Softwarová podpora týmu\Project RimskaCisla\Project RimskaCisla\obj\Debug\Project RimskaCisla.exe
+C:\Users\tomba\Desktop\Škola\Fakulta aplikované informatiky UTB\Softwarová podpora týmu\Project RimskaCisla\Project RimskaCisla\obj\Debug\Project RimskaCisla.pdb
