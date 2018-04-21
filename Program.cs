@@ -142,7 +142,7 @@ namespace Project_RimskaCisla
         {
             //pracovní plocha projektu
             long cislo;
-            string rimskeCislo = "tady nic neni";
+            string rimskeCislo = "";
             bool finish = false;
             while (finish != true)
             {
@@ -159,7 +159,7 @@ namespace Project_RimskaCisla
                 Console.WriteLine();
                 Console.ReadKey();
 
-                Console.WriteLine("Tomuv chytry informacni system programu:");
+                Console.WriteLine("Informacni system programu:");
                 Console.WriteLine();
                 if (c1.PoznejM(cislo) != cislo)
                 {
@@ -220,13 +220,12 @@ namespace Project_RimskaCisla
                 Console.WriteLine();
 
                 //fáze parsování do výsledného řetězce
-                long pocetZnaku = 0;
                 char[] M = new char[c1.PoznejM(cislo)];
                 for (long m = 0; m < c1.PoznejM(cislo); m++)
                 {
                     M[m] = 'M';
                     rimskeCislo = string.Join("", M);
-                    pocetZnaku++;
+                    Console.WriteLine(M[m]);
                 }
                 cislo = c1.Zasobnik;
                 Console.WriteLine($"Zasobnik po M: {c1.Zasobnik}");
@@ -237,7 +236,7 @@ namespace Project_RimskaCisla
                 {
                     D[d] = 'D';
                     rimskeCislo = string.Join("", D);
-                    pocetZnaku++;
+                    Console.WriteLine(D[d]);
                 }
                 cislo = c1.Zasobnik;
                 Console.WriteLine($"Zasobnik po D: {c1.Zasobnik}");
@@ -248,7 +247,7 @@ namespace Project_RimskaCisla
                 {
                     C[c] = 'C';
                     rimskeCislo = string.Join("", C);
-                    pocetZnaku++;
+                    Console.WriteLine(C[c]);
                 }
                 cislo = c1.Zasobnik;
                 Console.WriteLine($"Zasobnik po C: {c1.Zasobnik}");
@@ -258,7 +257,7 @@ namespace Project_RimskaCisla
                 {
                     L[l] = 'L';
                     rimskeCislo = string.Join("", L);
-                    pocetZnaku++;
+                    Console.WriteLine(L[l]);
                 }
                 cislo = c1.Zasobnik;
                 Console.WriteLine($"Zasobnik po L: {c1.Zasobnik}");
@@ -268,7 +267,7 @@ namespace Project_RimskaCisla
                 {
                     X[x] = 'X';
                     rimskeCislo = string.Join("", X);
-                    pocetZnaku++;
+                    Console.WriteLine(X[x]);
                 }
                 cislo = c1.Zasobnik;
                 Console.WriteLine($"Zasobnik po X: {c1.Zasobnik}");
@@ -279,7 +278,7 @@ namespace Project_RimskaCisla
                 {
                     V[v] = 'V';
                     rimskeCislo = string.Join("", V);
-                    pocetZnaku++;
+                    Console.WriteLine(V[v]);
                 }
                 cislo = c1.Zasobnik;
                 Console.WriteLine($"Zasobnik po V: {c1.Zasobnik}");
@@ -290,13 +289,13 @@ namespace Project_RimskaCisla
                 {
                     I[i] = 'I';
                     rimskeCislo = string.Join("", I);
-                    pocetZnaku++;
+                    Console.WriteLine(I[i]);
                 }
                 cislo = c1.Zasobnik;
                 Console.WriteLine($"Zasobnik po I: {c1.Zasobnik}");
                 Console.WriteLine();
 
-                Console.WriteLine($"Nahled vysledneho retezce: {rimskeCislo}");
+                //Console.WriteLine($"Nahled vysledneho retezce: {rimskeCislo}");
 
                 Console.ReadKey();
             }
