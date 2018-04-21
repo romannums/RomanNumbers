@@ -224,9 +224,10 @@ namespace Project_RimskaCisla
                 for (long m = 0; m < c1.PoznejM(cislo); m++)
                 {
                     M[m] = 'M';
-                    rimskeCislo = string.Join("", M);
-                    Console.WriteLine(M[m]);
+                    rimskeCislo = string.Join("", M[m]);
                 }
+                string VypisM = new string(M);
+                Console.WriteLine($"M string: {VypisM}");
                 cislo = c1.Zasobnik;
                 Console.WriteLine($"Zasobnik po M: {c1.Zasobnik}");
                 //Console.WriteLine($"Pocet znaku po M: {pocetZnaku}");
@@ -235,9 +236,10 @@ namespace Project_RimskaCisla
                 for (long d = 0; d < c1.PoznejD(cislo); d++)
                 {
                     D[d] = 'D';
-                    rimskeCislo = string.Join("", D);
-                    Console.WriteLine(D[d]);
+                    rimskeCislo = string.Join("", D[d]);
                 }
+                string VypisD = new string(D);
+                Console.WriteLine($"D string: {VypisD}");
                 cislo = c1.Zasobnik;
                 Console.WriteLine($"Zasobnik po D: {c1.Zasobnik}");
                 //Console.WriteLine($"Pocet znaku po D: {pocetZnaku}");
@@ -246,9 +248,10 @@ namespace Project_RimskaCisla
                 for (long c = 0; c < c1.PoznejC(cislo); c++)
                 {
                     C[c] = 'C';
-                    rimskeCislo = string.Join("", C);
-                    Console.WriteLine(C[c]);
+                    rimskeCislo = string.Join("", C[c]);
                 }
+                string VypisC = new string(C);
+                Console.WriteLine($"C string: {VypisC}");
                 cislo = c1.Zasobnik;
                 Console.WriteLine($"Zasobnik po C: {c1.Zasobnik}");
 
@@ -256,9 +259,10 @@ namespace Project_RimskaCisla
                 for (long l = 0; l < c1.PoznejL(cislo); l++)
                 {
                     L[l] = 'L';
-                    rimskeCislo = string.Join("", L);
-                    Console.WriteLine(L[l]);
+                    rimskeCislo = string.Join("", L[l]);
                 }
+                string VypisL = new string(L);
+                Console.WriteLine($"L string: {VypisL}");
                 cislo = c1.Zasobnik;
                 Console.WriteLine($"Zasobnik po L: {c1.Zasobnik}");
 
@@ -266,9 +270,10 @@ namespace Project_RimskaCisla
                 for (long x = 0; x < c1.PoznejX(cislo); x++)
                 {
                     X[x] = 'X';
-                    rimskeCislo = string.Join("", X);
-                    Console.WriteLine(X[x]);
+                    rimskeCislo = string.Join("", X[x]);
                 }
+                string VypisX = new string(X);
+                Console.WriteLine($"X string: {VypisX}");
                 cislo = c1.Zasobnik;
                 Console.WriteLine($"Zasobnik po X: {c1.Zasobnik}");
                 //Console.WriteLine($"Pocet znaku po X: {pocetZnaku}");
@@ -277,9 +282,10 @@ namespace Project_RimskaCisla
                 for (long v = 0; v < c1.PoznejV(cislo); v++)
                 {
                     V[v] = 'V';
-                    rimskeCislo = string.Join("", V);
-                    Console.WriteLine(V[v]);
+                    rimskeCislo = string.Join("", V[v]);
                 }
+                string VypisV = new string(V);
+                Console.WriteLine($"V string: {VypisV}");
                 cislo = c1.Zasobnik;
                 Console.WriteLine($"Zasobnik po V: {c1.Zasobnik}");
 
@@ -288,15 +294,15 @@ namespace Project_RimskaCisla
                 for (long i = 0; i < c1.PoznejI(cislo); i++)
                 {
                     I[i] = 'I';
-                    rimskeCislo = string.Join("", I);
-                    Console.WriteLine(I[i]);
+                    rimskeCislo = string.Join("", I[i]);
                 }
+                string VypisI = new string(I);
+                Console.WriteLine($"I string: {VypisI}");
                 cislo = c1.Zasobnik;
                 Console.WriteLine($"Zasobnik po I: {c1.Zasobnik}");
                 Console.WriteLine();
-
-                //Console.WriteLine($"Nahled vysledneho retezce: {rimskeCislo}");
-
+                
+                Console.WriteLine($"Tvar vysledneho retezce: {VypisM}{VypisD}{VypisC}{VypisL}{VypisX}{VypisV}{VypisI}");
                 Console.ReadKey();
             }
 
