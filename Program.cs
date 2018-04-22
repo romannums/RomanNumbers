@@ -315,7 +315,37 @@ namespace Project_RimskaCisla
                 cislo = c1.Zasobnik;
                 Console.WriteLine($"  Zasobnik po I: {c1.Zasobnik}");
                 Console.WriteLine();
-                
+
+                //ošetření podmínek správného výpisu:
+                if (VypisD + VypisC == "DCCCC")
+                {
+                    VypisD = "";
+                    VypisC = "CM";
+                }
+                else if (VypisC == "CCCC")
+                {
+                    VypisC = "CD";
+                }
+                else if (VypisL + VypisX == "LXXXX")
+                {
+                    VypisL = "";
+                    VypisX = "XC";
+                }
+                else if (VypisX == "XXXX")
+                {
+                    VypisX = "XL";
+                }
+                else if (VypisV + VypisI == "VIIII")
+                {
+                    VypisV = "";
+                    VypisI = "IX";
+                }
+                else if (VypisI == "IIII")
+                {
+                    VypisI = "IV";
+                }
+
+                //Console.WriteLine($"  Tvar vysledneho retezce: M:{VypisM} D:{VypisD} C:{VypisC} L:{VypisL} X:{VypisX} V:{VypisV} I:{VypisI}");
                 Console.WriteLine($"  Tvar vysledneho retezce: {VypisM}{VypisD}{VypisC}{VypisL}{VypisX}{VypisV}{VypisI}");
                 Console.WriteLine();
                 Console.WriteLine("(pokracuj stisknutim libovolne klavesy)");
@@ -326,7 +356,7 @@ namespace Project_RimskaCisla
 
             Console.Clear();
             Console.WriteLine();
-            Console.WriteLine("  Konec testovani...");
+            Console.WriteLine("  Konec programu...");
             Console.ReadKey();
             System.Environment.Exit(1);
         }
