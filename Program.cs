@@ -149,7 +149,7 @@ namespace Project_RimskaCisla
                 Console.Clear();
                 Console.CursorVisible = false;
                 Console.WriteLine();
-                string zadej = "  Zadej cislo, ktere chces prevest: ";
+                string zadej = "  Zadej cislo, ktere chces prevest (zaporne cislo pro ukonceni): ";
                 foreach (char c in zadej)
                 {
                     Console.Write(c);
@@ -173,6 +173,7 @@ namespace Project_RimskaCisla
                 Console.WriteLine();
                 Console.ReadKey();
 
+                //část programu určená pro testování změny zadaného čísla:
                 Console.WriteLine("  Informacni system programu:");
                 Console.WriteLine();
                 if (c1.PoznejM(cislo) != cislo)
@@ -345,6 +346,7 @@ namespace Project_RimskaCisla
                     VypisI = "IV";
                 }
 
+                //konečný výpis řetězce:
                 //Console.WriteLine($"  Tvar vysledneho retezce: M:{VypisM} D:{VypisD} C:{VypisC} L:{VypisL} X:{VypisX} V:{VypisV} I:{VypisI}");
                 Console.WriteLine($"  Tvar vysledneho retezce: {VypisM}{VypisD}{VypisC}{VypisL}{VypisX}{VypisV}{VypisI}");
                 Console.WriteLine();
