@@ -5,3 +5,6 @@ C:\Users\tomba\Desktop\Škola\Fakulta aplikované informatiky UTB\Softwarová po
 C:\Users\tomba\Desktop\Škola\Fakulta aplikované informatiky UTB\Softwarová podpora týmu\Project RimskaCisla\Project RimskaCisla\obj\Debug\Project RimskaCisla.csproj.CoreCompileInputs.cache
 C:\Users\tomba\Desktop\Škola\Fakulta aplikované informatiky UTB\Softwarová podpora týmu\Project RimskaCisla\Project RimskaCisla\obj\Debug\Project RimskaCisla.exe
 C:\Users\tomba\Desktop\Škola\Fakulta aplikované informatiky UTB\Softwarová podpora týmu\Project RimskaCisla\Project RimskaCisla\obj\Debug\Project RimskaCisla.pdb
+C:\Users\tomba\Desktop\Škola\Fakulta aplikované informatiky UTB\Softwarová podpora týmu\Project RimskaCisla\Project RimskaCisla\bin\Debug\nunit.framework.dll
+C:\Users\tomba\Desktop\Škola\Fakulta aplikované informatiky UTB\Softwarová podpora týmu\Project RimskaCisla\Project RimskaCisla\bin\Debug\nunit.framework.pdb
+C:\Users\tomba\Desktop\Škola\Fakulta aplikované informatiky UTB\Softwarová podpora týmu\Project RimskaCisla\Project RimskaCisla\bin\Debug\nunit.framework.xml
