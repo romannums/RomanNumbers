@@ -1,0 +1,23 @@
+1. Install the Cake bootstrapper
+The bootstrapper is used to download Cake and the tools required by the build script.
+Windows
+Invoke-WebRequest https://cakebuild.net/download/bootstrapper/windows -OutFile build.ps1
+Linux
+curl -Lsfo build.sh https://cakebuild.net/download/bootstrapper/linux
+OS X
+curl -Lsfo build.sh https://cakebuild.net/download/bootstrapper/osx
+2. Create a Cake script
+Add a cake script called build.cake to the same location as the bootstrapper script that you downloaded.
+var target = Argument("target", "Default");
+
+Task("Default")
+  .Does(() =>
+{
+  Information("Hello World!");
+});
+
+RunTarget(target);
+3. Run it!
+Windows
+# Execute the bootstrapper script.
+./build.ps1
