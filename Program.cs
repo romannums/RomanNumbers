@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit;
+using NUnit.Framework;
 
 namespace Project_RimskaCisla
 {
@@ -146,6 +147,18 @@ namespace Project_RimskaCisla
             long cislo;
             string rimskeCislo = "";
             bool finish = false;
+            string prolog = "        Projekt RimskaCisla";
+            Console.CursorVisible = false;
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            foreach (char c in prolog)
+            {
+                Console.Write(c);
+                System.Threading.Thread.Sleep(45);
+            }
+            System.Threading.Thread.Sleep(2500);
+            Console.CursorVisible = true;
             while (finish != true)
             {
                 Console.Clear();
@@ -159,10 +172,15 @@ namespace Project_RimskaCisla
                 }
                 Console.CursorVisible = true;
                 cislo = long.Parse(Console.ReadLine());
+                long puvodniCislo = cislo;
                 if(cislo < 0)
                 {
                     finish = true;
                     goto konec;
+                }
+                if (cislo == 0)
+                {
+                    Console.WriteLine("  ~ s nulou nelze dobre pracovat");
                 }
                 RimskeCislo c1 = new RimskeCislo(cislo);
                 if (c1.Cislo > 0)
@@ -170,72 +188,105 @@ namespace Project_RimskaCisla
                     Console.WriteLine($"  ~ zadane cislo ({c1.Cislo}) uspesne prijato");
                 }
                 Console.WriteLine();
-                Console.WriteLine("(pokracuj stisknutim libovolne klavesy)");
-                Console.WriteLine("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _");
+
+                rozhodnuti:
+                bool zobraz = true;
+                Console.CursorVisible = false;
+                string testy = "  Prejes si zobrazit prubeh testovani?";
+                foreach (char c in testy)
+                {
+                    Console.Write(c);
+                    System.Threading.Thread.Sleep(45);
+                }
                 Console.WriteLine();
-                Console.ReadKey();
-
-                //část programu určená pro testování změny zadaného čísla:
-                Console.WriteLine("  Informacni system programu:");
                 Console.WriteLine();
-                if (c1.PoznejM(cislo) != cislo)
+                System.Threading.Thread.Sleep(300);
+                Console.WriteLine("  1. ANO");
+                System.Threading.Thread.Sleep(300);
+                Console.WriteLine("  2. NE");
+                string carky = "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _";
+                foreach (char c in carky)
                 {
-                    Console.WriteLine($"    Pocet vypsani M je: {c1.PoznejM(cislo)}");
+                    Console.Write(c);
+                    System.Threading.Thread.Sleep(45);
                 }
-                else
-                {
-                    Console.WriteLine("    Pocet vypsani M je: 0");
-                }
-
-                if (c1.PoznejD(cislo) != cislo)
-                {
-                    Console.WriteLine($"    Pocet vypsani D je: {c1.PoznejD(cislo)}");
-                }
-                else
-                {
-                    Console.WriteLine("    Pocet vypsani D je: 0");
-                }
-
-                if (c1.PoznejC(cislo) != cislo)
-                {
-                    Console.WriteLine($"    Pocet vypsani C je: {c1.PoznejC(cislo)}");
-                }
-                else
-                {
-                    Console.WriteLine("    Pocet vypsani C je: 0");
-                }
-
-                if (c1.PoznejL(cislo) != cislo)
-                {
-                    Console.WriteLine($"    Pocet vypsani L je: {c1.PoznejL(cislo)}");
-                }
-                else
-                {
-                    Console.WriteLine("    Pocet vypsani L je: 0");
-                }
-
-                if (c1.PoznejX(cislo) != cislo)
-                {
-                    Console.WriteLine($"    Pocet vypsani X je: {c1.PoznejX(cislo)}");
-                }
-                else
-                {
-                    Console.WriteLine("    Pocet vypsani X je: 0");
-                }
-
-                if (c1.PoznejV(cislo) != cislo)
-                {
-                    Console.WriteLine($"    Pocet vypsani V je: {c1.PoznejV(cislo)}");
-                }
-                else
-                {
-                    Console.WriteLine("    Pocet vypsani V je: 0");
-                }
-
-                Console.WriteLine($"    Pocet vypsani I je: {c1.PoznejI(cislo)}");
-
                 Console.WriteLine();
+                Console.WriteLine();
+                Console.CursorVisible = true;
+                ConsoleKey testovani = Console.ReadKey(true).Key;
+                switch (testovani)
+                {
+                    case ConsoleKey.NumPad1:
+                        //část programu určená pro testování změny zadaného čísla:
+                        Console.WriteLine("  Informacni system programu:");
+                        Console.WriteLine();
+                        if (c1.PoznejM(cislo) != cislo)
+                        {
+                            Console.WriteLine($"    Pocet vypsani M je: {c1.PoznejM(cislo)}");
+                        }
+                        else
+                        {
+                            Console.WriteLine("    Pocet vypsani M je: 0");
+                        }
 
+                        if (c1.PoznejD(cislo) != cislo)
+                        {
+                            Console.WriteLine($"    Pocet vypsani D je: {c1.PoznejD(cislo)}");
+                        }
+                        else
+                        {
+                            Console.WriteLine("    Pocet vypsani D je: 0");
+                        }
+
+                        if (c1.PoznejC(cislo) != cislo)
+                        {
+                            Console.WriteLine($"    Pocet vypsani C je: {c1.PoznejC(cislo)}");
+                        }
+                        else
+                        {
+                            Console.WriteLine("    Pocet vypsani C je: 0");
+                        }
+
+                        if (c1.PoznejL(cislo) != cislo)
+                        {
+                            Console.WriteLine($"    Pocet vypsani L je: {c1.PoznejL(cislo)}");
+                        }
+                        else
+                        {
+                            Console.WriteLine("    Pocet vypsani L je: 0");
+                        }
+
+                        if (c1.PoznejX(cislo) != cislo)
+                        {
+                            Console.WriteLine($"    Pocet vypsani X je: {c1.PoznejX(cislo)}");
+                        }
+                        else
+                        {
+                            Console.WriteLine("    Pocet vypsani X je: 0");
+                        }
+
+                        if (c1.PoznejV(cislo) != cislo)
+                        {
+                            Console.WriteLine($"    Pocet vypsani V je: {c1.PoznejV(cislo)}");
+                        }
+                        else
+                        {
+                            Console.WriteLine("    Pocet vypsani V je: 0");
+                        }
+
+                        Console.WriteLine($"    Pocet vypsani I je: {c1.PoznejI(cislo)}");
+                        Console.WriteLine();
+                        break;
+
+                    case ConsoleKey.NumPad2:
+                        zobraz = false;
+                        break;
+
+                    default:
+                        goto rozhodnuti;
+                }
+
+                
                 //fáze parsování do výsledného řetězce
                 char[] M = new char[c1.PoznejM(cislo)];
                 for (long m = 0; m < c1.PoznejM(cislo); m++)
@@ -244,10 +295,15 @@ namespace Project_RimskaCisla
                     rimskeCislo = string.Join("", M[m]);
                 }
                 string VypisM = new string(M);
-                Console.WriteLine($"    M string: {VypisM}");
+                if (zobraz == true)
+                {
+                    Console.WriteLine($"    M string: {VypisM}");
+                }
                 cislo = c1.Zasobnik;
-                Console.WriteLine($"  Zasobnik po M: {c1.Zasobnik}");
-                //Console.WriteLine($"Pocet znaku po M: {pocetZnaku}");
+                if (zobraz == true)
+                {
+                    Console.WriteLine($"  Zasobnik po M: {c1.Zasobnik}");
+                }
 
                 char[] D = new char[c1.PoznejD(cislo)];
                 for (long d = 0; d < c1.PoznejD(cislo); d++)
@@ -256,10 +312,15 @@ namespace Project_RimskaCisla
                     rimskeCislo = string.Join("", D[d]);
                 }
                 string VypisD = new string(D);
-                Console.WriteLine($"    D string: {VypisD}");
+                if (zobraz == true)
+                {
+                    Console.WriteLine($"    D string: {VypisD}");
+                }
                 cislo = c1.Zasobnik;
-                Console.WriteLine($"  Zasobnik po D: {c1.Zasobnik}");
-                //Console.WriteLine($"Pocet znaku po D: {pocetZnaku}");
+                if (zobraz == true)
+                {
+                    Console.WriteLine($"  Zasobnik po D: {c1.Zasobnik}");
+                }
 
                 char[] C = new char[c1.PoznejC(cislo)];
                 for (long c = 0; c < c1.PoznejC(cislo); c++)
@@ -268,9 +329,15 @@ namespace Project_RimskaCisla
                     rimskeCislo = string.Join("", C[c]);
                 }
                 string VypisC = new string(C);
-                Console.WriteLine($"    C string: {VypisC}");
+                if (zobraz == true)
+                {
+                    Console.WriteLine($"    C string: {VypisC}");
+                }
                 cislo = c1.Zasobnik;
-                Console.WriteLine($"  Zasobnik po C: {c1.Zasobnik}");
+                if (zobraz == true)
+                {
+                    Console.WriteLine($"  Zasobnik po C: {c1.Zasobnik}");
+                }
 
                 char[] L = new char[c1.PoznejL(cislo)];
                 for (long l = 0; l < c1.PoznejL(cislo); l++)
@@ -279,9 +346,15 @@ namespace Project_RimskaCisla
                     rimskeCislo = string.Join("", L[l]);
                 }
                 string VypisL = new string(L);
-                Console.WriteLine($"    L string: {VypisL}");
+                if (zobraz == true)
+                {
+                    Console.WriteLine($"    L string: {VypisL}");
+                }
                 cislo = c1.Zasobnik;
-                Console.WriteLine($"  Zasobnik po L: {c1.Zasobnik}");
+                if (zobraz == true)
+                {
+                    Console.WriteLine($"  Zasobnik po L: {c1.Zasobnik}");
+                }
 
                 char[] X = new char[c1.PoznejX(cislo)];
                 for (long x = 0; x < c1.PoznejX(cislo); x++)
@@ -290,10 +363,15 @@ namespace Project_RimskaCisla
                     rimskeCislo = string.Join("", X[x]);
                 }
                 string VypisX = new string(X);
-                Console.WriteLine($"    X string: {VypisX}");
+                if (zobraz == true)
+                {
+                    Console.WriteLine($"    X string: {VypisX}");
+                }
                 cislo = c1.Zasobnik;
-                Console.WriteLine($"  Zasobnik po X: {c1.Zasobnik}");
-                //Console.WriteLine($"Pocet znaku po X: {pocetZnaku}");
+                if (zobraz == true)
+                {
+                    Console.WriteLine($"  Zasobnik po X: {c1.Zasobnik}");
+                }
 
                 char[] V = new char[c1.PoznejV(cislo)];
                 for (long v = 0; v < c1.PoznejV(cislo); v++)
@@ -302,10 +380,15 @@ namespace Project_RimskaCisla
                     rimskeCislo = string.Join("", V[v]);
                 }
                 string VypisV = new string(V);
-                Console.WriteLine($"    V string: {VypisV}");
+                if (zobraz == true)
+                {
+                    Console.WriteLine($"    V string: {VypisV}");
+                }
                 cislo = c1.Zasobnik;
-                Console.WriteLine($"  Zasobnik po V: {c1.Zasobnik}");
-
+                if (zobraz == true)
+                {
+                    Console.WriteLine($"  Zasobnik po V: {c1.Zasobnik}");
+                }
 
                 char[] I = new char[c1.PoznejI(cislo)];
                 for (long i = 0; i < c1.PoznejI(cislo); i++)
@@ -314,10 +397,17 @@ namespace Project_RimskaCisla
                     rimskeCislo = string.Join("", I[i]);
                 }
                 string VypisI = new string(I);
-                Console.WriteLine($"    I string: {VypisI}");
+                if (zobraz == true)
+                {
+                    Console.WriteLine($"    I string: {VypisI}");
+                }
                 cislo = c1.Zasobnik;
-                Console.WriteLine($"  Zasobnik po I: {c1.Zasobnik}");
+                if (zobraz == true)
+                {
+                    Console.WriteLine($"  Zasobnik po I: {c1.Zasobnik}");
+                }
                 Console.WriteLine();
+
 
                 //ošetření podmínek správného výpisu:
                 if (VypisD + VypisC == "DCCCC")
@@ -348,9 +438,16 @@ namespace Project_RimskaCisla
                     VypisI = "IV";
                 }
 
+
                 //konečný výpis řetězce:
-                //Console.WriteLine($"  Tvar vysledneho retezce: M:{VypisM} D:{VypisD} C:{VypisC} L:{VypisL} X:{VypisX} V:{VypisV} I:{VypisI}");
-                Console.WriteLine($"  Tvar vysledneho retezce: {VypisM}{VypisD}{VypisC}{VypisL}{VypisX}{VypisV}{VypisI}");
+                if (puvodniCislo == 0)
+                {
+                    Console.WriteLine("  Tvar vysledneho retezce: 0");
+                }
+                else
+                {
+                    Console.WriteLine($"  Tvar vysledneho retezce: {VypisM}{VypisD}{VypisC}{VypisL}{VypisX}{VypisV}{VypisI}");
+                }
                 Console.WriteLine();
                 Console.WriteLine("(pokracuj stisknutim libovolne klavesy)");
                 Console.ReadKey();
