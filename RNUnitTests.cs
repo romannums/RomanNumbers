@@ -12,7 +12,7 @@ namespace Project_RimskaCisla
     {
         public void RNUnitTest1()
         {
-            Assert.That(10, Is.GreaterThan(0));
+            Assert.That(true, Is.GreaterThan(0));
         }
 
         public void RNUnitTest2()
